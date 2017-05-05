@@ -1,78 +1,80 @@
 <script type="text/javascript">
-		//创建一个表单，编号，姓名，年龄，性别
-		//创建一个元素 table
-		var creatTable= document.createElement("table");
-		cts = creatTable.style;
-		cts.width = "400px";
-		cts.height = "300px";
-		cts.border = "1px red solid";
-		cts.borderSpacing = "0";
-		//给创建的table 设置ID名 tab
-		creatTable.setAttribute("id","tab");
-		document.body.appendChild(creatTable);
-		var creatFirstTr= document.createElement("tr");	
-		creatFirstTr.style.textAlign = "center";
-		creatFirstTr.style.height = "50px";
-		creatFirstTr.style.color = "royalblue";
-		document.getElementById("tab").appendChild(creatFirstTr);
-		//创建 第一行的 th
-		var creatFirstTh1 = document.createElement("th");
-			creatFirstTh1.innerHTML = "编号";
-			creatFirstTh1.style.border = "1px red solid";
-		var creatFirstTh2 = document.createElement("th");
-			creatFirstTh2.innerHTML = "姓名";
-			creatFirstTh2.style.border = "1px red solid";
-		var creatFirstTh3 = document.createElement("th");
-			creatFirstTh3.innerHTML = "年龄";
-			creatFirstTh3.style.border = "1px red solid";
-		var creatFirstTh4 = document.createElement("th");
-			creatFirstTh4.innerHTML = "性别";
-			creatFirstTh4.style.border = "1px red solid";
-		document.getElementById("tab").firstChild.appendChild(creatFirstTh1);	
-		document.getElementById("tab").firstChild.appendChild(creatFirstTh2);
-		document.getElementById("tab").firstChild.appendChild(creatFirstTh3);
-		document.getElementById("tab").firstChild.appendChild(creatFirstTh4);
-		//调用方法
-		addTr("a","110","张三","22","南");
-		addTr("b","111","李四","23","女");
-		addTr("c","112","赵五","24","南");
-		addTr("d","113","王六六","25","男");
-		addTr("r","114","皮攀奇","26","南");
-		addTr("f","115","千年","24","女");
-		addTr("e","116","九上","23","南");
-		addTr("da","117","石泉","22","女");
-		addTr("s","118","萧十一郎","21","南");
-		addTr("zz","119","十二妹儿","22","女");
-		
-		//添加一个tr包含四个td的方法
-		function addTr(num,id,name,age,sex){
-			//变量名加一个字符串参数，不重复
-			var ctr = ctr + num;
-			//创建tr
-			var ctr= document.createElement("tr");	
-			ctr.style.textAlign = "center";
-			ctr.style.height = "50px";
-			ctr.style.color = "royalblue";
-			//创建 四个td
-			var ctd1 = document.createElement("td");
-			ctd1.innerHTML = id;
-			ctd1.style.border = "1px red solid";
-			var ctd2 = document.createElement("td");
-			ctd2.innerHTML = name;
-			ctd2.style.border = "1px red solid";
-			var ctd3 = document.createElement("td");
-			ctd3.innerHTML = age;
-			ctd3.style.border = "1px red solid";
-			var ctd4 = document.createElement("td");
-			ctd4.innerHTML = sex;
-			ctd4.style.border = "1px red solid";
-			// td添加到tr中
-			ctr.appendChild(ctd1);
-			ctr.appendChild(ctd2);
-			ctr.appendChild(ctd3);
-			ctr.appendChild(ctd4);
-			// tr 添加到 table中
-			document.getElementById("tab").appendChild(ctr);
-		}
+	//创建一个表单，编号，姓名，年龄，性别
+	//创建一个元素 table
+	var creatTable= document.createElement("table");
+	cts = creatTable.style;
+	cts.width = "400px";
+	cts.height = "300px";
+	cts.border = "1px red solid";
+	cts.borderSpacing = "0";
+	//给创建的table 设置ID名 tab
+	creatTable.setAttribute("id","tab");
+	document.body.appendChild(creatTable);
+	
+	var creatFirstTr= document.createElement("tr");	
+	creatFirstTr.style.textAlign = "center";
+	creatFirstTr.style.height = "50px";
+	creatFirstTr.style.color = "royalblue";
+	document.getElementById("tab").appendChild(creatFirstTr);
+	//创建 第一行的 th
+	var creatFirstTh1 = document.createElement("th");
+	creatFirstTh1.innerHTML = "编号";
+	creatFirstTh1.style.border = "1px red solid";
+	var creatFirstTh2 = document.createElement("th");
+	creatFirstTh2.innerHTML = "姓名";
+	creatFirstTh2.style.border = "1px red solid";
+	var creatFirstTh3 = document.createElement("th");
+	creatFirstTh3.innerHTML = "年龄";
+	creatFirstTh3.style.border = "1px red solid";
+	var creatFirstTh4 = document.createElement("th");
+	creatFirstTh4.innerHTML = "性别";
+	creatFirstTh4.style.border = "1px red solid";
+	
+	document.getElementById("tab").firstChild.appendChild(creatFirstTh1);	
+	document.getElementById("tab").firstChild.appendChild(creatFirstTh2);
+	document.getElementById("tab").firstChild.appendChild(creatFirstTh3);
+	document.getElementById("tab").firstChild.appendChild(creatFirstTh4);
+	//调用方法
+	addTr("a","110","张三","22","南");
+	addTr("b","111","李四","23","女");
+	addTr("c","112","赵五","24","南");
+	addTr("d","113","王六六","25","男");
+	addTr("r","114","皮攀奇","26","南");
+	addTr("f","115","千年","24","女");
+	addTr("e","116","九上","23","南");
+	addTr("da","117","石泉","22","女");
+	addTr("s","118","萧十一郎","21","南");
+	addTr("zz","119","十二妹儿","22","女");
 
-	</script>
+	//添加一个tr包含四个td的方法
+	function addTr(num,id,name,age,sex){
+		//变量名加一个字符串参数，不重复
+		var ctr = ctr + num;
+		//创建tr
+		var ctr= document.createElement("tr");	
+		ctr.style.textAlign = "center";
+		ctr.style.height = "50px";
+		ctr.style.color = "royalblue";
+		//创建 四个td
+		var ctd1 = document.createElement("td");
+		ctd1.innerHTML = id;
+		ctd1.style.border = "1px red solid";
+		var ctd2 = document.createElement("td");
+		ctd2.innerHTML = name;
+		ctd2.style.border = "1px red solid";
+		var ctd3 = document.createElement("td");
+		ctd3.innerHTML = age;
+		ctd3.style.border = "1px red solid";
+		var ctd4 = document.createElement("td");
+		ctd4.innerHTML = sex;
+		ctd4.style.border = "1px red solid";
+		// td添加到tr中
+		ctr.appendChild(ctd1);
+		ctr.appendChild(ctd2);
+		ctr.appendChild(ctd3);
+		ctr.appendChild(ctd4);
+		// tr 添加到 table中
+		document.getElementById("tab").appendChild(ctr);
+	}
+
+</script>
