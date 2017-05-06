@@ -1,0 +1,14 @@
+  function checAll(){
+        var d = document.getElementById("dd");
+        var c = d.getElementsByTagName("input");
+        for (var i = 0; i < c.length; i++) {
+          c[i].checked = true;
+        }
+      }
+  function checkClear(){
+    var d = document.getElementById("dd");
+    var c = d.getElementsByTagName("input");
+    for (var i = 0; i < c.length; i++) {
+      c[i].checked = false;
+    }
+  }
